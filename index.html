@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Grid Layout</title>
+    <!-- Tailwind CSS CDN -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"> -->
+    <style>
+      /* Custom styles for the Inter font */
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f0f4f8; /* Light blue-gray background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh; /* Ensure it takes full viewport height */
+        padding: 20px; /* Add some padding around the content */
+        box-sizing: border-box; /* Include padding in element's total width and height */
+      }
+
+      /* Container for the grid */
+      .grid-container {
+        display: grid;
+        gap: 20px; /* Space between grid items */
+        width: 100%;
+        max-width: 1000px; /* Max width for the grid on very wide screens */
+        padding: 20px;
+        background-color: #ffffff; /* White background for the container */
+        border-radius: 16px; /* Rounded corners for the container */
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+      }
+
+      /* Responsive grid columns */
+      /* Mobile: 1 column */
+      .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      /* Small screens (e.g., tablets, 640px and up): 2 columns */
+      @media (min-width: 640px) {
+        .grid-container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      /* Medium screens (e.g., small laptops, 768px and up): 3 columns */
+      @media (min-width: 768px) {
+        .grid-container {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      /* Large screens (e.g., desktops, 1024px and up): 4 columns */
+      @media (min-width: 1024px) {
+        .grid-container {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+
+      /* Extra large screens (e.g., wide monitors, 1280px and up): 5 columns */
+      @media (min-width: 1280px) {
+        .grid-container {
+          grid-template-columns: repeat(5, 1fr);
+        }
+      }
+
+      /* Card styling */
+      .card {
+        background-color: #cbd5e1; /* Default light gray background */
+        padding: 24px;
+        border-radius: 12px; /* Rounded corners for cards */
+        text-align: center;
+        font-size: 1.25rem; /* Text size */
+        font-weight: 600; /* Semi-bold text */
+        color: #334155; /* Darker text color */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 120px; /* Minimum height for cards */
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transition for hover effects */
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Card shadow */
+      }
+
+      .card:hover {
+        transform: translateY(-5px); /* Lift card on hover */
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Enhanced shadow on hover */
+      }
+
+      /* Specific card colors */
+      .card-blue {
+        background-color: #bfdbfe;
+        color: #1e40af;
+      } /* Light blue */
+      .card-green {
+        background-color: #d1fae5;
+        color: #065f46;
+      } /* Light green */
+      .card-purple {
+        background-color: #e9d5ff;
+        color: #6b21a8;
+      } /* Light purple */
+      .card-yellow {
+        background-color: #fef08a;
+        color: #a16207;
+      } /* Light yellow */
+      .card-red {
+        background-color: #fee2e2;
+        color: #991b1b;
+      } /* Light red */
+      .card-orange {
+        background-color: #fed7aa;
+        color: #c2410c;
+      } /* Light orange */
+      .card-teal {
+        background-color: #ccfbf1;
+        color: #0f766e;
+      } /* Light teal */
+      .card-pink {
+        background-color: #fbcfe8;
+        color: #be185d;
+      } /* Light pink */
+      .card-indigo {
+        background-color: #c7d2fe;
+        color: #4338ca;
+      } /* Light indigo */
+      .card-lime {
+        background-color: #d9f99da;
+        color: #4d7c0f;
+      } /* Light lime */
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <!-- Card 1 -->
+      <div class="card card-blue">
+        <p>Big Black Bug</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="card card-green">
+        <p>Peter Piper Picked</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="card card-purple">
+        <p>Tiny Tim Tapped</p>
+      </div>
+      <!-- Card 4 -->
+      <div class="card card-yellow">
+        <p>Daring Duck Dove</p>
+      </div>
+      <!-- Card 5 -->
+      <div class="card card-red">
+        <p>Great Green Goose</p>
+      </div>
+      <!-- Card 6 -->
+      <div class="card card-orange">
+        <p>Pink Panthers Pounce</p>
+      </div>
+      <!-- Card 7 -->
+      <div class="card card-teal">
+        <p>Blue Balloons Burst</p>
+      </div>
+      <!-- Card 8 -->
+      <div class="card card-pink">
+        <p>Crisp Cookies Crumble</p>
+      </div>
+      <!-- Card 9 -->
+      <div class="card card-indigo">
+        <p>Deep Dark Dungeon</p>
+      </div>
+      <!-- Card 10 -->
+      <div class="card card-lime">
+        <p>Quick Quack Quaked</p>
+      </div>
+    </div>
+  </body>
+</html>
